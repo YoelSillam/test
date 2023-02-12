@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<script>
+    let maVariable= "HELLO WORLD!!!";
+    const listMois = ['Janvier', 'Fevrier', 'Mars', 'Avril', '....'];
+
+
+    //alert(listMois);
+    let somme=10;
+
+    function afficheMessage(message)
+    {
+        let myNumber = document.getElementById('iNumber').value;
+        if(parseInt(myNumber) == myNumber)
+        {
+            somme = somme + parseInt(myNumber);
+            document.getElementById("resultat").innerHTML=somme;
+            document.getElementById("erreur").innerHTML="";
+        }
+        else
+        {
+            alert("Merci d'entrer un nombre !!!!!!!!!!!!!") ;
+            document.getElementById("iNumber").value="";
+        }
+    }
+    function affichemulti(multi){
+        let myNumber = document.getElementById('iNumber').value;
+        if(parseInt(myNumber) == myNumber)
+        {
+            somme = somme * parseInt(myNumber)
+            document.getElementById("resultat").innerHTML=somme;
+            document.getElementById("erreur").innerHTML="";
+        }
+        else
+        {
+            alert("Merci d'entrer un nombre !!!!!!!!!!!!!") ;
+            document.getElementById("iNumber").value="";
+        }
+    }
+    function reset()
+    {
+        somme=10;
+        document.getElementById("resultat").innerHTML=somme;
+        document.getElementById("iNumber").value="";
+    }
+
+</script>
+
+<div id="erreur"></div>
+<input type="text" id="iNumber">
+<button onclick="afficheMessage()">Somme</button>
+<button onclick="affichemulti()">Multiplier</button>
+<button onclick="reset()">reset</button>
+<div id="resultat">10</div>
+</body>
+</html>
